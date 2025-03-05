@@ -3,13 +3,62 @@ export function readme() {
     "#############################",
     "# Welcome to shell-emulator #",
     "#############################",
+    "这是一个 Linux 终端的模拟器，包含一些简单的 Linux 命令。",
+    "基于 Vue.js 实现，原作者 ChrisKimZHT",
     "",
-    "It's a simple shell emulator made with Vue.js.",
-    "Author: <a href=\"https://github.com/ChrisKimZHT\" target=\"_blank\">ChrisKimZHT</a> | GitHub: <a href=\"https://github.com/ChrisKimZHT/shell-emulator\" target=\"_blank\">shell-emulator</a>",
+    "如果你不会使用命令，没有关系，我也会简单介绍一下：",
+    "- cd:    进入一个目录，如 cd /home/，如果要返回上一级目录，可以使用 cd ..",
+    "- ls:    显示当前目录下的文件和文件夹，加粗的是文件夹",
+    "- pwd:   显示当前所在的目录",
+    "- cat:   显示一个文件的内容，如 cat readme.txt",
+    "- clear: 清空屏幕，你也可以使用快捷键 Ctrl + L",
+    "",
+    "这里也有一些重要的快捷键：",
+    "- Tab:      自动补全命令或文件名",
+    "- Ctrl + C: 中断当前的命令",
+    "- Ctrl + L: 清空屏幕",
+    "- ↑:        查看历史输入的上一条",
+    "- ↓:        查看历史输入的下一条",
     "",
   ].join("\n");
 }
 
+export function aboutme() {
+  return [
+    "Hello! 很高兴遇见你！",
+    "我的微博 @92rw_DF4B2152，有很多铁路运转的照片。",
+    "目前常驻日本东京，从事 IT 行业的工作。",
+    "",
+    "美好的事情有很多，值得用心寻找和发现。",
+    ""
+  ].join("\n");
+}
+
+export function mainpage() {
+  let createTime = new Date(2021, 8 - 25, 14, 0, 0, 0, 0); // 年-月-日
+  let now = new Date();
+  let timeDelta = Math.floor((now.getTime() - createTime.getTime()) / 1000); // 单位秒
+  let seconds = timeDelta % 60;
+  let minutes = Math.floor(timeDelta / 60) % 60;
+  let hours = Math.floor(timeDelta / 3600) % 24;
+  let days = Math.floor(timeDelta / 86400);
+  return [
+    "<strong>利用 Github Pages 实现的【个人网站】 <a href=\"https://92rw.github.io/\" targer=\"_blank\">92rw.github.io</a></strong>",
+    "",
+    `我主要维护的站点，到现在已经运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒。`,
+    "如果感兴趣，欢迎来看看呀！",
+    ""
+  ].join("\n");
+}
+
+export function notes() {
+  return [
+    "<strong>【Java学习笔记】 <a href=\"https://github.com/92rw/Java-Study-Notes\" targer=\"_blank\">github.com/92rw/Java-Study-Notes</a></strong>",
+    "",
+    "我从零学习 Java 后端应用的笔记",
+    "",
+  ].join("\n");
+}
 //////////////////////////////////////////////////////////////////////
 
 export function cpuinfo() {
